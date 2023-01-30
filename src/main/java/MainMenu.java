@@ -41,7 +41,9 @@ public class MainMenu {
 					//CreatingTables.CreateItemsTable();
 					//CreatingTables.CreateShopeTable();
 					//CreatingTables.CreatingInvoiceTable();
-					CreatingTables.CreateShopTwo();
+					//CreatingTables.CreateShopTwo();
+					CreatingTables.InvoiceHeader();
+					
 					break;
 
 				

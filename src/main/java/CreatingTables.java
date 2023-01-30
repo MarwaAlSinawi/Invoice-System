@@ -100,7 +100,7 @@ public class CreatingTables {
 
 	String CreateShopTabel = "CREATE TABLE Shop " + "(shop_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 			+ " Shop_name VARCHAR(100) , " + " Shop_tel_number VARCHAR (10) , "
-			+ " Shop_email TEXT , " + " Shop_website TEXT ) ";
+			+ " Shop_email TEXT , " + " Shop_website TEXT "+"Tel VARCHAR(100) "+"Fax VARCHAR(100) "+" Email VARCHAR(100)  ) ";
 	Connection conn = null;
 	try {
 		Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
@@ -134,6 +134,30 @@ public class CreatingTables {
 		conn = DriverManager.getConnection(url, user, pass);
 		Statement st = conn.createStatement();
 		int m = st.executeUpdate( CreateShopTabel);
+		if (m >= 0) {
+			System.out.println("Created Shop table in given database...");
+			
+		} else {
+			System.out.println(" table already Created in given database...");
+		}
+		conn.close();
+	} catch (Exception ex) {
+		System.err.println(ex);
+	}
+}public static void  InvoiceHeader() {
+
+	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
+	String user = "sa";
+	String pass = "root";
+
+	String InvoiceHeader = "CREATE TABLE InvoiceHeader " + "( shop_id INTEGER," +"FOREIGN KEY (shop_id) REFERENCES ShopTwo (shop_id), "+ " Tel VARCHAR(100),"+"Fax VARCHAR(100), "+"Email VARCHAR(100), "+"Website VARCHAR(100))  ";
+	Connection conn = null;
+	try {
+		Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+		DriverManager.registerDriver(driver);
+		conn = DriverManager.getConnection(url, user, pass);
+		Statement st = conn.createStatement();
+		int m = st.executeUpdate( InvoiceHeader);
 		if (m >= 0) {
 			System.out.println("Created Shop table in given database...");
 			
