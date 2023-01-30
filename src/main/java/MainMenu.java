@@ -8,13 +8,14 @@ import java.util.Scanner;
 public class MainMenu {
 		public static void MainMenuFuncation() {
 			List<String> Menu = Arrays.asList("***Welcome to the Main Menu ***\n"  
-					+ " 1-  Shop Settings \n" 
-					+ " 2-  Manage Shop Items  \n"
-					+ " 3-  Create New Invoice \n"
-					+ " 4-  Report: Statistics (No Of Items, No of Invoices, Total Sales)\n"
-					+ " 5-  Report: All Invoices ( Invoice No, Invoice Date, Customer Name, No of items, Total, Balance)\n"
-					+ " 6-  Search (1) Invoice (Search by Invoice No and Report All Invoice details with items)\n"
-					+ " 7-  Program Statistics (Print each Main Menu Item with how many number selected)\n" + " 8-  Exit");
+					+ " 1-  CreatingTables \n" 
+					+ " 2-  Shop Settings \n"
+					+ " 3-  Manage Shop Items  \n"
+					+ " 4-  Create New Invoice \n"
+					+ " 5-  Report: Statistics (No Of Items, No of Invoices, Total Sales)\n"
+					+ " 6-  Report: All Invoices ( Invoice No, Invoice Date, Customer Name, No of items, Total, Balance)\n"
+					+ " 7-  Search (1) Invoice (Search by Invoice No and Report All Invoice details with items)\n"
+					+ " 8-  Program Statistics (Print each Main Menu Item with how many number selected)\n" + " 8-  Exit");
 
 			for (String MasterMenue : Menu) {
 				System.out.println(MasterMenue);
@@ -36,17 +37,20 @@ public class MainMenu {
 
 			
 				case 1:
-					ShopSettings.ShopSettingSubMenue();
-					
+					CreatingTables.CreateCustomerTable();
+					CreatingTables.CreateItemsTable();
+					CreatingTables.CreateShopeTable();
+					CreatingTables.CreatingInvoiceTable();
 					break;
 
 				
 				case 2:
-					ManageShopItems.ManageShopItemsSubMenu();
+					ShopSettings.ShopSettingSubMenue();
+				
 					break;
 
 				case 3:
-
+					ManageShopItems.ManageShopItemsSubMenu();
 					break;
 
 				case 4:
