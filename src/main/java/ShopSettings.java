@@ -58,8 +58,9 @@ public class ShopSettings {
 				Exit = false;
 				break;
 			case 6:
-				
-
+				InsertInvoiceHeaderTablee.InsertInvoiceHeaderTablee();
+				ShopSettings.ShopSettingSubMenue();
+				Exit = false;
 				break;
 			case 7:
 				Exit = false;
