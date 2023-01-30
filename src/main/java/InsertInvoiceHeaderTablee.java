@@ -30,9 +30,13 @@ public class InsertInvoiceHeaderTablee {
      
      System.out.println("enter Website");
      String Website = scanner.next();
+     
+     System.out.println("enter shop_id");
+     Integer shop_id = scanner.nextInt();
 
      // Inserting data using SQL query
-     String sql = "insert into InvoiceHeader  values('" + Tel+ "','" + Fax + "','" + Email +"','"+Website+"')";
+    
+     String sql = "insert into InvoiceHeader (Tel,Fax,Email,Website,shop_id) values('" + Tel+ "','" + Fax + "','" + Email +"','"+Website+"',"+shop_id+")";
 
      // Connection class object
      Connection con = null;
@@ -52,6 +56,7 @@ public class InsertInvoiceHeaderTablee {
          Statement st = con.createStatement();
 
          // Executing query
+         //System.out.println(sql);
          int m = st.executeUpdate(sql);
          if (m >=  1)
              System.out.println(
