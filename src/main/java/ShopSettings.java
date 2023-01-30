@@ -40,7 +40,7 @@ public class ShopSettings {
 				break;
 
 			case 3:
-
+				InsertCustomer.InsertIntoInvoice();
 				break;
 
 			
