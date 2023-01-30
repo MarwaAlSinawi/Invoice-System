@@ -40,11 +40,13 @@ public class ShopSettings {
 				break;
 
 			case 3:
-				InsertCustomer.InsertIntoInvoice();
+				InsertCustomer.InsertIntoCustomer();
 				break;
-
-			
 			case 4:
+				InsertInvoiceTable.InsertIntoInvoiceTable();
+				break;
+			
+			case 5:
 				Exit = false;
 
 				break;
