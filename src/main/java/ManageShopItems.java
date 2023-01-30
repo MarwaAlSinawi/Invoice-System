@@ -26,7 +26,8 @@ public class ManageShopItems {
 				switch (subMenu) {
 
 				case 1:
-					System.out.println("worked");
+					InsertData.InsertIntoShop();
+				
 
 					break;
 
