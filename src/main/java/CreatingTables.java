@@ -118,6 +118,32 @@ public class CreatingTables {
 	} catch (Exception ex) {
 		System.err.println(ex);
 	}
+	
+}public static void CreateShopTwo () {
+
+	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
+	String user = "sa";
+	String pass = "root";
+
+	String CreateShopTabel = "CREATE TABLE ShopTwo " + "(shop_id INTEGER PRIMARY KEY IDENTITY(1,1), "
+			+ " Shop_name VARCHAR(100) )";
+	Connection conn = null;
+	try {
+		Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+		DriverManager.registerDriver(driver);
+		conn = DriverManager.getConnection(url, user, pass);
+		Statement st = conn.createStatement();
+		int m = st.executeUpdate( CreateShopTabel);
+		if (m >= 0) {
+			System.out.println("Created Shop table in given database...");
+			
+		} else {
+			System.out.println(" table already Created in given database...");
+		}
+		conn.close();
+	} catch (Exception ex) {
+		System.err.println(ex);
+	}
 }
 }
 

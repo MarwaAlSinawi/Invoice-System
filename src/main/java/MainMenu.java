@@ -37,10 +37,11 @@ public class MainMenu {
 
 			
 				case 1:
-					CreatingTables.CreateCustomerTable();
-					CreatingTables.CreateItemsTable();
-					CreatingTables.CreateShopeTable();
-					CreatingTables.CreatingInvoiceTable();
+					//CreatingTables.CreateCustomerTable();
+					//CreatingTables.CreateItemsTable();
+					//CreatingTables.CreateShopeTable();
+					//CreatingTables.CreatingInvoiceTable();
+					CreatingTables.CreateShopTwo();
 					break;
 
 				
