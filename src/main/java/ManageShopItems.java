@@ -43,7 +43,8 @@ public class ManageShopItems {
 
 				
 				case 4:
-					
+					ReportAllItems.ReportAllItemsTable();
+					ManageShopItemsSubMenu();
 					break;
 				case 5:
 					ExitShopItem = false;
