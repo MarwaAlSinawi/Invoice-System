@@ -57,7 +57,7 @@ public class MainMenu {
 					break;
 
 				case 4:
-
+					CreateNewInvoice.CreateNewInvoiceTable();
 					break;
 
 				case 5:
