@@ -16,7 +16,7 @@ public class MainMenu {
 					+ " 6-  Report: All Invoices ( Invoice No, Invoice Date, Customer Name, No of items, Total, Balance)\n"
 					+ " 7-  Search (1) Invoice (Search by Invoice No and Report All Invoice details with items)\n"
 					+ " 8-  Program Statistics (Print each Main Menu Item with how many number selected)\n" + " "
-					+ "9-  Exit");
+					+ " 9-  Exit");
 
 			for (String MasterMenue : Menu) {
 				System.out.println(MasterMenue);
@@ -41,9 +41,9 @@ public class MainMenu {
 					//CreatingTables.CreateCustomerTable();
 					//CreatingTables.CreateItemsTable();
 					//CreatingTables.CreateShopeTable();
-					//CreatingTables.CreatingInvoiceTable();
+					CreatingTables.CreatingInvoiceTable();
 					//CreatingTables.CreateShopTwo();
-					CreatingTables.InvoiceHeader();
+				//	CreatingTables.InvoiceHeader();
 					
 					break;
 
@@ -70,7 +70,7 @@ public class MainMenu {
 					break;
 
 				case 7:
-
+					SearchInvoice.SearchInvoiceTable();
 					break;
 
 				case 8:

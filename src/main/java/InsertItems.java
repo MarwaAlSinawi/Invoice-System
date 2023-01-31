@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class InsertInvoice {
+public class InsertItems{
 	public static void InsertIntoItems() throws Throwable {
 		 // Creating the connection using Oracle DB
       // Note: url syntax is standard, so do grasp

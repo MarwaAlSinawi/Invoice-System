@@ -14,7 +14,8 @@ public class CreatingTables {
 		String CreateInvoiceTabel = "CREATE TABLE Invoice " + "(Invoice_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 				+ "Shop_id INTEGER, " + "Customer_id INTEGER,"
 				+ " FOREIGN KEY (Shop_id) REFERENCES Shop(shop_id), " + " Invoice_date Date , "
-				   + " FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id)) ";
+				   + " FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id),"
+				   + "item_id Integer , FOREIGN KEY (item_id) REFERENCES Items(Items_id)) ";
 
 		Connection conn = null;
 		try {

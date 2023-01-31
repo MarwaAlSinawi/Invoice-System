@@ -23,7 +23,7 @@ public class ChangeItemPrice {
             int idinput =sa.nextInt();
             System.out.println("Enter  price : ");
             int priceInput =sa.nextInt();
-            int count=0;
+          
             String sql = "UPDATE Items SET Items_unit_price ="+priceInput+" WHERE Items_id = "+idinput;
             System.out.println("the price has been updated!!");
             ResultSet rs=st.executeQuery(sql);

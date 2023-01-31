@@ -28,11 +28,14 @@ public class InsertInvoiceTable {
     System.out.println("enter Invoice_date");
     String Invoice_date = scanner.next();
     
+    System.out.println("enter item_id");
+    String item_id = scanner.next();
+    
  
     
 
     // Inserting data using SQL query
-    String sql = "insert into  Invoice   values('" + Shop_id+ "','" + Customer_id + "','" + Invoice_date +"')";
+    String sql = "insert into  Invoice   values('" + Shop_id+ "','" + Customer_id + "','" + Invoice_date +"',"+item_id+")";
 
     // Connection class object
     Connection con = null;
