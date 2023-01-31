@@ -25,52 +25,62 @@ public class MainMenu {
 		}
 
 		public static void main(String[] args) throws Throwable {
+			Scanner sa=new Scanner(System.in);
+			Constraint cons=new Constraint();
+			System.out.println("Enter Url");
+			cons.setUrl(sa.next());
+			
+			System.out.println("Enter user");
+			cons.setUser(sa.next());
+			System.out.println("Enter password");
+			cons.setPass(sa.next());
+			
+			
 
-			Scanner sc = new Scanner(System.in);
             boolean ExitMainMenue=true;
 			do {
 				MainMenuFuncation();
 
-				int Menu = sc.nextInt();
+				int Menu = sa.nextInt();
 				switch (Menu) {
 				
 				
 
 			
 				case 1:
-					CreatingTables.CreateCustomerTable();
-					CreatingTables.CreateItemsTable();
-					CreatingTables.CreateShopeTable();
-				    CreatingTables.CreatingInvoiceTable();
-					CreatingTables.CreateShopTwo();
-					CreatingTables.InvoiceHeader();
+					CreatingTables.CreateCustomerTable(cons.getUrl(),cons.getUser(),cons.getPass());
+					CreatingTables.CreateItemsTable(cons.getUrl(),cons.getUser(),cons.getPass());
+					CreatingTables.CreateShopeTable(cons.getUrl(),cons.getUser(),cons.getPass());
+				    CreatingTables.CreatingInvoiceTable(cons.getUrl(),cons.getUser(),cons.getPass());
+					CreatingTables.CreateShopTwo(cons.getUrl(),cons.getUser(),cons.getPass());
+					CreatingTables.InvoiceHeader(cons.getUrl(),cons.getUser(),cons.getPass());
 					
 					break;
 
 				
 				case 2:
-					ShopSettings.ShopSettingSubMenue();
+					ShopSettings.ShopSettingSubMenue(cons.getUrl(),cons.getUser(),cons.getPass());
 				
 					break;
 
 				case 3:
-					ManageShopItems.ManageShopItemsSubMenu();
+					ManageShopItems.ManageShopItemsSubMenu(cons.getUrl(),cons.getUser(),cons.getPass());
 					break;
 
 				case 4:
-					CreateNewInvoice.CreateNewInvoiceTable();
+					CreateNewInvoice.CreateNewInvoiceTable(cons.getUrl(),cons.getUser(),cons.getPass());
 					break;
 
 				case 5:
-					ReportStatistics.Statistics();
+					ReportStatistics.Statistics(cons.getUrl(),cons.getUser(),cons.getPass());
 					break;
 
 				case 6:
-					ReportInvoice.ReportAllItemsTable();
+					ReportInvoice.ReportAllItemsTable(cons.getUrl(),cons.getUser(),cons.getPass());
 					break;
 
 				case 7:
-					SearchInvoice.SearchInvoiceTable();
+					SearchInvoice.SearchInvoiceTable(cons.getUrl(),cons.getUser(),cons.getPass());
 					break;
 
 				case 8:
@@ -78,6 +88,7 @@ public class MainMenu {
 					break;
 
 				case 9:
+					Scanner sc=new Scanner(System.in);
 					System.out.println("Enter 1 if you want to exit , if you dont want to exit press 2 ");
 					int number = 0;
 					number = sc.nextInt();

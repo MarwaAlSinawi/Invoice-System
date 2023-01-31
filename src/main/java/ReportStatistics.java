@@ -6,14 +6,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class ReportStatistics{
-	public static void Statistics() throws Throwable {
-		  String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-
-	      // Username and password to access DB
-	     
-	      // Custom initialization
-	      String user = "sa";
-	      String pass = "root";
+	public static void Statistics(String url,String user, String pass) throws Throwable {
+		
 	      
 	      String sql = "Select count (*) AS NumberOFItems ,(Select COUNT (*) from Invoice) AS NumberOfInvice , SUM (Items_quantity_Price) AS totalprice  From Items ;";
 	      Connection con = null;

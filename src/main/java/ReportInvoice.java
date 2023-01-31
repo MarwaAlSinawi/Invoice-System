@@ -7,10 +7,8 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class ReportInvoice {
-	public static void ReportAllItemsTable() {
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-		String user = "sa";
-		String pass = "root";
+	public static void ReportAllItemsTable(String url,String user,String pass) {
+		
 		Scanner sa = new Scanner(System.in);
 		int count = 0;
 		String sql = "SELECT Invoice.Invoice_id,Invoice.Invoice_date,customer.Customer_name, Customer.Number_of_items,Customer.Total_amount, Customer.Balance FROM Invoice\r\n"

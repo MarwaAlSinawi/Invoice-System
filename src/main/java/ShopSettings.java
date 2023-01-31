@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class ShopSettings {
 
-	public static void ShopSettingSubMenue() throws Throwable {
+	public static void ShopSettingSubMenue(String url,String user,String pass) throws Throwable {
+		boolean Exit = true;
+		do {
 
 		List<String> ShopSettingSubMenue = Arrays.asList(
 				"*** Welcome to the Shop Services Menu ***\n "
@@ -22,45 +24,44 @@ public class ShopSettings {
 		}
 
 		Scanner sc = new Scanner(System.in);
-		boolean Exit = true;
 
-		do {
+		
 
 			int ShopSettingSubMenueOne  = sc.nextInt();
 			switch (ShopSettingSubMenueOne) {
 
 			case 1:
 				InsertData.InsertIntoShop();
-				ShopSettings.ShopSettingSubMenue();
-				Exit = false;
+				ShopSettings.ShopSettingSubMenue(url,user,pass);
+				
 				break;
 
 			case 2:
 				InsertItems.InsertIntoItems();
-				ShopSettings.ShopSettingSubMenue();
-				Exit = false;
+				ShopSettings.ShopSettingSubMenue(url,user,pass);
+				
 				break;
 
 			case 3:
-				InsertCustomer.InsertIntoCustomer();
-				ShopSettings.ShopSettingSubMenue();
-				Exit = false;
+				InsertCustomer.InsertIntoCustomer(url,user,pass);
+				ShopSettings.ShopSettingSubMenue(url,user,pass);
+				
 				break;
 			case 4:
 				InsertInvoiceTable.InsertIntoInvoiceTable();
-				ShopSettings.ShopSettingSubMenue();
-				Exit = false;
+				ShopSettings.ShopSettingSubMenue(url,user,pass);
+				
 				break;
 			
 			case 5:
 				SetShop.SetShopTwo();
-				ShopSettings.ShopSettingSubMenue();
-				Exit = false;
+				ShopSettings.ShopSettingSubMenue(url,user,pass);
+				
 				break;
 			case 6:
 				InsertInvoiceHeaderTablee.InsertInvoiceHeaderTablee();
-				ShopSettings.ShopSettingSubMenue();
-				Exit = false;
+				ShopSettings.ShopSettingSubMenue(url,user,pass);
+				
 				break;
 			case 7:
 				Exit = false;

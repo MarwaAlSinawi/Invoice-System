@@ -6,17 +6,10 @@ import java.util.Scanner;
 
 public class CreateNewInvoice {
 
-	public static void CreateNewInvoiceTable() throws Throwable {
+	public static void CreateNewInvoiceTable(String url,String user,String pass) throws Throwable {
 		 // Creating the connection using Oracle DB
       // Note: url syntax is standard, so do grasp
-      String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-
-      // Username and password to access DB
-     
-      // Custom initialization
-      String user = "sa";
-      String pass = "root";
-
+ 
       // Entering the data
       Scanner scanner = new Scanner(System.in);
 

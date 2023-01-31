@@ -4,12 +4,8 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class CreatingTables {
-	public static void CreatingInvoiceTable() {
+	public static void CreatingInvoiceTable(String url,String user,String pass) {
 
-
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-		String user = "sa";
-		String pass = "root";
 
 		String CreateInvoiceTabel = "CREATE TABLE Invoice " + "(Invoice_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 				+ "Shop_id INTEGER, " + "Customer_id INTEGER,"
@@ -38,11 +34,8 @@ public class CreatingTables {
 		
 	
 
-}public static void CreateCustomerTable () {
+}public static void CreateCustomerTable (String url,String user,String pass) {
 
-	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-	String user = "sa";
-	String pass = "root";
 
 	String createCustomerTable = "CREATE TABLE Customer " + "(Customer_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 			+ " Customer_name VARCHAR(1000) , " + " Customer_phone_number VARCHAR (12) , "
@@ -66,12 +59,9 @@ public class CreatingTables {
 		System.err.println(ex);
 	}
 
-}public static void CreateItemsTable () {
+}public static void CreateItemsTable (String url,String user,String pass) {
 
-	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-	String user = "sa";
-	String pass = "root";
-
+	
 	String createItemsTabel = "CREATE TABLE Items " + "(Items_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 			+ " Items_name VARCHAR(100) , " + " Items_unit_price FLOAT , "
 			+ " Items_quantity INTEGER , " + " Items_quantity_price INTEGER)";
@@ -93,12 +83,9 @@ public class CreatingTables {
 	} catch (Exception ex) {
 		System.err.println(ex);
 	}
-}public static void CreateShopeTable () {
+}public static void CreateShopeTable (String url,String user,String pass) {
 
-	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-	String user = "sa";
-	String pass = "root";
-
+	
 	String CreateShopTabel = "CREATE TABLE Shop " + "(shop_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 			+ " Shop_name VARCHAR(100) , " + " Shop_tel_number VARCHAR (10) , "
 			+ " Shop_email TEXT , " + " Shop_website TEXT "+"Tel VARCHAR(100) "+"Fax VARCHAR(100) "+" Email VARCHAR(100)  ) ";
@@ -120,11 +107,8 @@ public class CreatingTables {
 		System.err.println(ex);
 	}
 	
-}public static void CreateShopTwo () {
+}public static void CreateShopTwo (String url,String user,String pass) {
 
-	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-	String user = "sa";
-	String pass = "root";
 
 	String CreateShopTabel = "CREATE TABLE ShopTwo " + "(shop_id INTEGER PRIMARY KEY IDENTITY(1,1), "
 			+ " Shop_name VARCHAR(100) )";
@@ -145,11 +129,7 @@ public class CreatingTables {
 	} catch (Exception ex) {
 		System.err.println(ex);
 	}
-}public static void  InvoiceHeader() {
-
-	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-	String user = "sa";
-	String pass = "root";
+}public static void  InvoiceHeader(String url,String user,String pass) {
 
 	String InvoiceHeader = "CREATE TABLE InvoiceHeader " + "( shop_id INTEGER," +"FOREIGN KEY (shop_id) REFERENCES ShopTwo (shop_id), "+ " Tel VARCHAR(100),"+"Fax VARCHAR(100), "+"Email VARCHAR(100), "+"Website VARCHAR(100))  ";
 	Connection conn = null;

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ManageShopItems {
 	
-		public static void ManageShopItemsSubMenu() throws Throwable {
+		public static void ManageShopItemsSubMenu(String url,String user,String pass) throws Throwable {
 			List<String> menuItemsList = Arrays.asList(
 					"***Welcome to the Item Services Menue *** \n"
 			+ " 1-  Add Items \n" 
@@ -26,25 +26,25 @@ public class ManageShopItems {
 				switch (subMenu) {
 
 				case 1:
-					AddItemsTable.AddItems();
-					ManageShopItemsSubMenu();
+					AddItemsTable.AddItems(url,user, pass);
+					ManageShopItemsSubMenu(url,user, pass);
 
 					break;
 
 				case 2:
-					DeleteItems.deleteItemsTable();
-					ManageShopItemsSubMenu();
+					DeleteItems.deleteItemsTable(url,user, pass);
+					ManageShopItemsSubMenu(url,user, pass);
 					break;
 
 				case 3:
-					ChangeItemPrice.ChangePrice();
-					ManageShopItemsSubMenu();
+					ChangeItemPrice.ChangePrice(url,user, pass);
+					ManageShopItemsSubMenu(url,user, pass);
 					break;
 
 				
 				case 4:
 					ReportAllItems.ReportAllItemsTable();
-					ManageShopItemsSubMenu();
+					ManageShopItemsSubMenu(url,user, pass);
 					break;
 				case 5:
 					ExitShopItem = false;

@@ -7,11 +7,19 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class SearchInvoice {
-	public static void SearchInvoiceTable() {
+    
+	public static void SearchInvoiceTable(String url,String user,String pass) {
 
-	String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
-    String user = "sa";
-    String pass = "root";
+		
+		
+		
+		
+		
+	//String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";
+   // String user = "sa";
+    //String pass = "root";
+		
+		
     Connection con = null;
     try {
         Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
