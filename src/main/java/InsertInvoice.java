@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class InsertInvoice {
-	public static void InsertIntoInvoice() throws Throwable {
+	public static void InsertIntoItems() throws Throwable {
 		 // Creating the connection using Oracle DB
       // Note: url syntax is standard, so do grasp
       String url = "jdbc:sqlserver://localhost:1433;databaseName=InvoiceSystem;encrypt=true;trustServerCertificate=true";

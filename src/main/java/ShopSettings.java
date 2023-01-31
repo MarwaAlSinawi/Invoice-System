@@ -36,7 +36,7 @@ public class ShopSettings {
 				break;
 
 			case 2:
-				InsertInvoice.InsertIntoInvoice();
+				InsertInvoice.InsertIntoItems();
 				ShopSettings.ShopSettingSubMenue();
 				Exit = false;
 				break;

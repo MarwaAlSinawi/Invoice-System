@@ -26,8 +26,8 @@ public class ManageShopItems {
 				switch (subMenu) {
 
 				case 1:
-					InsertData.InsertIntoShop();
-				
+					AddItemsTable.AddItems();
+					ManageShopItemsSubMenu();
 
 					break;
 

@@ -6,6 +6,7 @@ Select * from Customer;
 Select * from Items ;
 Select * from Shop ;
 Select * from ShopTwo ;
+Select * from InvoiceHeader ;
 ----------------------------------
 alter table  Shop add   fax varchar(100);
 update shop set fax =1233 where shop_id=1;
@@ -18,3 +19,4 @@ update shop set fax =1888 where shop_id=7;
 update shop set fax =1999 where shop_id=8;
 update shop set fax =1900 where shop_id=9;
 ---------------------------------------------
+drop table InvoiceHeader ; 
