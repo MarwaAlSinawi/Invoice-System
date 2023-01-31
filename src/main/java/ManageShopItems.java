@@ -37,7 +37,8 @@ public class ManageShopItems {
 					break;
 
 				case 3:
-
+					ChangeItemPrice.ChangePrice();
+					ManageShopItemsSubMenu();
 					break;
 
 				
