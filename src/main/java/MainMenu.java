@@ -27,7 +27,7 @@ public class MainMenu {
 		public static void main(String[] args) throws Throwable {
 
 			Scanner sc = new Scanner(System.in);
-
+            boolean ExitMainMenue=true;
 			do {
 				MainMenuFuncation();
 
@@ -38,12 +38,12 @@ public class MainMenu {
 
 			
 				case 1:
-					//CreatingTables.CreateCustomerTable();
-					//CreatingTables.CreateItemsTable();
-					//CreatingTables.CreateShopeTable();
-					CreatingTables.CreatingInvoiceTable();
-					//CreatingTables.CreateShopTwo();
-				//	CreatingTables.InvoiceHeader();
+					CreatingTables.CreateCustomerTable();
+					CreatingTables.CreateItemsTable();
+					CreatingTables.CreateShopeTable();
+				    CreatingTables.CreatingInvoiceTable();
+					CreatingTables.CreateShopTwo();
+					CreatingTables.InvoiceHeader();
 					
 					break;
 
@@ -78,14 +78,22 @@ public class MainMenu {
 					break;
 
 				case 9:
+					System.out.println("Enter 1 if you want to exit , if you dont want to exit press 2 ");
+					int number = 0;
+					number = sc.nextInt();
+					if(number == 1) {
+						ExitMainMenue=false;
+					} if(number == 2) {
+						ExitMainMenue=true;
+					}
 
-					break;
+					//break;
 			
 				
 
 				}
 
-			} while (true);
+			} while (ExitMainMenue);
 
 		}
 	}
