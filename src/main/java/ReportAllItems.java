@@ -13,7 +13,7 @@ public static void ReportAllItemsTable() {
 	String pass = "root";
 	Scanner sa = new Scanner(System.in);
 	int count = 0;
-	String sql = "SELECT * FROM Items";
+	String sql = "SELECT * FROM Items"; 
 
 	Connection con = null;
 

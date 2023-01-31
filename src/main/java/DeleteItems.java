@@ -22,8 +22,9 @@ public static void deleteItemsTable() {
             int idinput =sa.nextInt();
             int count=0;
             String sql ="DELETE FROM Items WHERE Items_id= '"+idinput+"'";
+            st.executeUpdate(sql);
             System.out.println("Item deleted!!");
-            ResultSet rs=st.executeQuery(sql);
+   
             }
         catch (Exception ex) {
             System.err.println(ex);

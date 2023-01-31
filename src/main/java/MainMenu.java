@@ -15,7 +15,8 @@ public class MainMenu {
 					+ " 5-  Report: Statistics (No Of Items, No of Invoices, Total Sales)\n"
 					+ " 6-  Report: All Invoices ( Invoice No, Invoice Date, Customer Name, No of items, Total, Balance)\n"
 					+ " 7-  Search (1) Invoice (Search by Invoice No and Report All Invoice details with items)\n"
-					+ " 8-  Program Statistics (Print each Main Menu Item with how many number selected)\n" + " 8-  Exit");
+					+ " 8-  Program Statistics (Print each Main Menu Item with how many number selected)\n" + " "
+					+ "9-  Exit");
 
 			for (String MasterMenue : Menu) {
 				System.out.println(MasterMenue);
@@ -61,7 +62,7 @@ public class MainMenu {
 					break;
 
 				case 5:
-
+					ReportStatistics.Statistics();
 					break;
 
 				case 6:
@@ -75,7 +76,10 @@ public class MainMenu {
 				case 8:
 
 					break;
-				
+
+				case 9:
+
+					break;
 			
 				
 

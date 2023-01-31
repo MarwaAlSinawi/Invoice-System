@@ -20,3 +20,9 @@ update shop set fax =1999 where shop_id=8;
 update shop set fax =1900 where shop_id=9;
 ---------------------------------------------
 drop table InvoiceHeader ; 
+---------------------------------------------
+
+4- Report: Statistics (No Of Items, No of Invoices, Total Sales) 
+Select count (*) AS NumberOFItems ,(Select COUNT (*) from Invoice) AS NumberOfInvice , SUM (Items_quantity_Price) AS totalprice  From Items ;
+
+---------------------------------------------------------------------
