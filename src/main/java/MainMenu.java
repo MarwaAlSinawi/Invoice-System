@@ -66,7 +66,7 @@ public class MainMenu {
 					break;
 
 				case 6:
-
+					ReportInvoice.ReportAllItemsTable();
 					break;
 
 				case 7:
