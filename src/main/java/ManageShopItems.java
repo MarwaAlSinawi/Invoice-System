@@ -32,7 +32,8 @@ public class ManageShopItems {
 					break;
 
 				case 2:
-
+					DeleteItems.deleteItemsTable();
+					ManageShopItemsSubMenu();
 					break;
 
 				case 3:
