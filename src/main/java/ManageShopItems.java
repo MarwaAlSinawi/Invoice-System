@@ -5,24 +5,29 @@ import java.util.Scanner;
 public class ManageShopItems {
 	
 		public static void ManageShopItemsSubMenu(String url,String user,String pass) throws Throwable {
-			List<String> menuItemsList = Arrays.asList(
-					"***Welcome to the Item Services Menue *** \n"
-			+ " 1-  Add Items \n" 
-			+ " 2-  Delete Items  \n"
-			+ " 3-  Change Item Price\n"
-			+ " 4-  Report All Items \n" 
-			+ " 5)  Go Back");
-			for (String ManageShopItemsSubMenuTwo : menuItemsList) {
-				System.out.println(ManageShopItemsSubMenuTwo);
-				
-			}
+//			List<String> menuItemsList = Arrays.asList(
+//					"***Welcome to the Item Services Menue *** \n"
+//			+ " 1-  Add Items \n" 
+//			+ " 2-  Delete Items  \n"
+//			+ " 3-  Change Item Price\n"
+//			+ " 4-  Report All Items \n" 
+//			+ " 5)  Go Back");
+//			for (String ManageShopItemsSubMenuTwo : menuItemsList) {
+//				System.out.println(ManageShopItemsSubMenuTwo);
+//				
+//			}
 
-			Scanner sc = new Scanner(System.in);
+			
+			
 			boolean ExitShopItem = true;
 
 			do {
-
+				Scanner sc = new Scanner(System.in);
+				Menue.displayAlTypeMenus(3);
+				System.out.println("Enter number you want:");
 				int subMenu = sc.nextInt();
+
+				
 				switch (subMenu) {
 
 				case 1:

@@ -8,25 +8,24 @@ public class ShopSettings {
 		boolean Exit = true;
 		do {
 
-		List<String> ShopSettingSubMenue = Arrays.asList(
-				"*** Welcome to the Shop Services Menu ***\n "
-						+ "1- Load Data Shop\n" 
-						+ "2- Load Data Items \n" 
-						+ "3- Load Data Customer\n" 
-						+ "4- Load Data Invoice\n" 
-						+ "5- Set Shop Name\n"
-						+ "6- Set Invoice Header (Tel / Fax / Email / Website \n" 
-						+ "7- Go Back");
-
-		for (String shopSetting : ShopSettingSubMenue) {
-			System.out.println(shopSetting);
-
-		}
+//		List<String> ShopSettingSubMenue = Arrays.asList(
+//				"*** Welcome to the Shop Services Menu ***\n "
+//						+ "1- Load Data Shop\n" 
+//						+ "2- Load Data Items \n" 
+//						+ "3- Load Data Customer\n" 
+//						+ "4- Load Data Invoice\n" 
+//						+ "5- Set Shop Name\n"
+//						+ "6- Set Invoice Header (Tel / Fax / Email / Website \n" 
+//						+ "7- Go Back");
+//
+//		for (String shopSetting : ShopSettingSubMenue) {
+//			System.out.println(shopSetting);
+//
+//		}
 
 		Scanner sc = new Scanner(System.in);
-
-		
-
+		Menue.displayAlTypeMenus(2);
+		System.out.println("Enter number you want:");
 			int ShopSettingSubMenueOne  = sc.nextInt();
 			switch (ShopSettingSubMenueOne) {
 
